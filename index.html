@@ -8,11 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Poppins', sans-serif;
@@ -33,9 +29,7 @@
       animation: fadeIn 0.6s ease;
     }
 
-    .screen.active {
-      display: block;
-    }
+    .screen.active { display: block; }
 
     h1 {
       font-family: 'Pacifico', cursive;
@@ -88,7 +82,7 @@
 
   <!-- Screen 1 -->
   <section class="screen active">
-    <img src="hello.gif" class="gif" alt="Hello">
+    <img src="hello.gif" class="gif">
     <h1>Hey Ritika 🌷</h1>
     <p>I made this because some things are better said this way.</p>
     <button onclick="next()">Next</button>
@@ -96,7 +90,7 @@
 
   <!-- Screen 2 -->
   <section class="screen">
-    <img src="smile.gif" class="gif" alt="Smile">
+    <img src="smile.gif" class="gif">
     <p>
       You don’t even realise it,<br>
       but you make normal days feel lighter<br>
@@ -107,7 +101,7 @@
 
   <!-- Screen 3 -->
   <section class="screen">
-    <img src="blush.gif" class="gif" alt="Blush">
+    <img src="blush.gif" class="gif">
     <p>
       I smile a little more because of you.<br>
       I laugh easier.<br>
@@ -118,7 +112,7 @@
 
   <!-- Screen 4 -->
   <section class="screen">
-    <img src="heart.gif" class="gif" alt="Heart">
+    <img src="heart.gif" class="gif">
     <p>
       So this isn’t dramatic.<br>
       It’s just honest.
@@ -128,10 +122,10 @@
 
   <!-- Final Screen -->
   <section class="screen">
-    <img src="final.gif" class="gif" alt="Final">
-    <h1>I really like you, Ritika 💖</h1>
+    <img src="final.gif" class="gif">
+    <h1>I really love you, Ritika 💖</h1>
     <p>And I’d love to make more memories with you.</p>
-    <button>Stay with me 💕</button>
+    <button onclick="goToValentine()">Continue 💌</button>
   </section>
 
   <script>
@@ -142,6 +136,10 @@
       screens[current].classList.remove('active');
       current++;
       screens[current].classList.add('active');
+    }
+
+    function goToValentine() {
+      window.location.href = "https://abhi3299.github.io/my-forver-love/";
     }
   </script>
 
