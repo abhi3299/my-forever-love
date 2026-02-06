@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For Ritika 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe4ec, #fff6f9);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+      overflow: hidden;
+    }
+
+    .screen {
+      display: none;
+      text-align: center;
+      padding: 30px;
+      max-width: 420px;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .gif {
+      width: 200px;
+      margin: 20px auto;
+      display: block;
+      animation: popIn 0.4s ease;
+    }
+
+    button {
+      background: #ff5c8a;
+      color: #fff;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(255, 92, 138, 0.35);
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Screen 1 -->
+  <section class="screen active">
+    <img src="hello.gif" class="gif" alt="Hello">
+    <h1>Hey Ritika 🌷</h1>
+    <p>I made this because some things are better said this way.</p>
+    <button onclick="next()">Next</button>
+  </section>
+
+  <!-- Screen 2 -->
+  <section class="screen">
+    <img src="smile.gif" class="gif" alt="Smile">
+    <p>
+      You don’t even realise it,<br>
+      but you make normal days feel lighter<br>
+      and quiet moments feel safe.
+    </p>
+    <button onclick="next()">Next</button>
+  </section>
+
+  <!-- Screen 3 -->
+  <section class="screen">
+    <img src="blush.gif" class="gif" alt="Blush">
+    <p>
+      I smile a little more because of you.<br>
+      I laugh easier.<br>
+      And somehow, things feel better when you’re around.
+    </p>
+    <button onclick="next()">Next</button>
+  </section>
+
+  <!-- Screen 4 -->
+  <section class="screen">
+    <img src="heart.gif" class="gif" alt="Heart">
+    <p>
+      So this isn’t dramatic.<br>
+      It’s just honest.
+    </p>
+    <button onclick="next()">Next</button>
+  </section>
+
+  <!-- Final Screen -->
+  <section class="screen">
+    <img src="final.gif" class="gif" alt="Final">
+    <h1>I really like you, Ritika 💖</h1>
+    <p>And I’d love to make more memories with you.</p>
+    <button>Stay with me 💕</button>
+  </section>
+
+  <script>
+    let current = 0;
+    const screens = document.querySelectorAll('.screen');
+
+    function next() {
+      screens[current].classList.remove('active');
+      current++;
+      screens[current].classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
